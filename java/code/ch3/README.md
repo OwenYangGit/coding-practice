@@ -11,6 +11,8 @@
 - OOP 使得 JAVA 擁有 DRY "Don't repeat yourself" 更好維護，修改的特性
 - OOP 使得開發人員能夠更易於創造可重用性的程式碼以及更少的程式碼實現功能和降低開發時間
 
-## DemoClass
+## java practice document
+
+### DemoClass
 - 學習 class 的 method 調用
 - 了解 static 和 non-static(public) method 的差異性
