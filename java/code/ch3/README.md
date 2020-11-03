@@ -16,3 +16,6 @@
 ### DemoClass
 - 學習 class 的 method 調用
 - 了解 static 和 non-static(public) method 的差異性
+
+### Car , CarLab
+- 學習在其他檔案的 main() 使用物件調用 class

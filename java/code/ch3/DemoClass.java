@@ -17,8 +17,11 @@ public class DemoClass{
         demoMethod();
         // static and non-static ( static or public ) , 看看差異性
         DemoStaticClass();
-        // DemoClass myNonStaticMethod = new DemoClass();
-        // myNonStaticMethod.DemoNonStaticClass();
-        DemoNonStaticClass();
+        DemoClass myNonStaticMethod = new DemoClass();
+        myNonStaticMethod.DemoNonStaticClass();
+        // DemoNonStaticClass(); // this line will compile error
+        // 調用別的檔案的 method , 然後會發現執行 javac 時它會連另一檔案一起編譯出 bytecode(.class)
+        ClassAndObj anotherObj = new ClassAndObj();
+        System.out.println(anotherObj.x);
     }
 }
