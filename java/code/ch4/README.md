@@ -12,3 +12,9 @@
 - package 可以分為兩種
   - build-in Packages (package from java api 預設包?) // The Java API is a library of prewritten classes
   - user-defined packages (自己寫)
+
+### Inheritance
+- 在 java 可以從一個 class 繼承另一個 class 的 attributes 和 method , inheritance concept 有兩個種類
+  - superClass
+  - subClass
+- 在 Inheritance 的關鍵字為 "extends"
