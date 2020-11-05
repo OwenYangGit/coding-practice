@@ -68,4 +68,10 @@
   - errors 是一種嚴重的失敗 , 無法透過 java 程式去 handled , 這種錯誤往往都是出現在運行環境
 
 #### Except.java
-一些常見的 Exceptions methods
+- 一些常見的 Exceptions methods
+- java 也可以讓 user 自定義 exceptions
+
+### InnerClass.java (有點難 , 後面有機會用到在細探)
+- 練習 Inner Class 的用法
+- 基本了解 Inner Class
+  - 為什麼用 Inner Class -> 當我們有一個 private class 要被訪問時 , 就可以透過 Inner Class 的設計方式去訪問
