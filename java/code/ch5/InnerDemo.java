@@ -13,7 +13,14 @@ class OuterClass {
   static class StaticInner {
       int p = 20;
   }
-}
+  // 關於從 inner class 訪問 outer class 的作法 
+  // 在 inner class 創建 method , 該 method 返回的結果跟 outer class 有關聯
+  class ReOuterInner {
+      public int myReOuterInnerMethod() {
+          return x;
+      }
+    }
+  }
 
 public class InnerDemo {
   public static void main(String[] args) {
@@ -30,5 +37,9 @@ public class InnerDemo {
     System.out.println(myStaticInner.p);
     // just like static attributes and methods, a static inner class does not have access to members of the outer class
     // System.out.println(myStaticInner.x); // compile error
+
+    // 從 inner class 訪問 outer class
+    OuterClass.ReOuterInner myReOut = myOuter.new ReOuterInner();
+    System.out.println(myReOut.myReOuterInnerMethod());
   }
 }
