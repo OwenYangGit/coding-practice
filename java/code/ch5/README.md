@@ -51,8 +51,15 @@ modifiers 概念很重要 , 在這麼多類別中使用不同概念操作程式�
 - 使用方式: 創建一個物件 , 調用 Scanner 裡面可以使用的 method
 
 ## Date 時間
-- java 沒有內建的 Date 類別 , 但可以使用 java.time package 來跟 date , time 的 api 互動 , 它有以下的 class
+- java 沒有內建的 Date 類別 , 但可以使用 java.time package 來跟 date/time 的 api 互動 , 它有以下的 class
   - LocalDate 回應 年月日
   - LocalTime 回應 時分秒
   - LocalDateTime 回應 年月日與時分秒
   - DateTimeFormatter 格式化輸出
+- 關於練習寫 code 時發現的一個問題 (為啥再調用 Date 的 Class 時不用先 new object?)
+  - 在 `MyDateLab.java` 有小小的解釋
+  - 主要是最後再 stackoverflow 中提到的兩句 , 在程式中調用該方法可能根本不涉及新的 object , 以 Logger 來說 , 返回的是舊的物件 , 跟新的無關
+  - 以圖來說 , 我去追了 LocalDateTime 的 now() 方法 其返回的是 `return now(Clock.systemDefaultZone());`
+![LocalDate now() 方法](../../image/LocalDate-now.png)
+  - 再往下追 , Clock.systemDefaultZone 的返回是 `return new SystemClock(ZoneId.systemDefault());`
+![Clock systemDefaultZone() 方法](../../image/Clock-systemDefaultZone.png)

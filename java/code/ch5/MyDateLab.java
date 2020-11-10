@@ -27,4 +27,7 @@ public class MyDateLab {
     // (應該是調用時每次都一定會先需要 new , 如果每一個引用的套件都 new 一次就會很可怕 , 所以套件的開發人員的寫法改變 ) 
     // stackoverflow 有人說這好像更偏向於 design pattern 的問題 
     // 參考資料: https://stackoverflow.com/questions/12254553/why-some-classes-dont-need-the-word-new-when-creating-its-instance
+    // 有句話我比較在意 , 他這邊提問是以 Logger 的 package 為例
+    // Also note that your example may not involve a new object at all. 你的範例可能不會調用到新的物件
+    // That Logger function might be returning an old object, not a new one. Logger 的 package 可能只返回舊的物件而不是新的
 }
