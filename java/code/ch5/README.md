@@ -63,3 +63,4 @@ modifiers 概念很重要 , 在這麼多類別中使用不同概念操作程式�
 ![LocalDate now() 方法](../../image/LocalDate-now.png)
   - 再往下追 , Clock.systemDefaultZone 的返回是 `return new SystemClock(ZoneId.systemDefault());`
 ![Clock systemDefaultZone() 方法](../../image/Clock-systemDefaultZone.png)
+    - 小結: 也就是說再調用 LocalDate 的 now 方法根本不需要操作它其他動作 , 它返回調用其他物件方法所取得的 result 回來
