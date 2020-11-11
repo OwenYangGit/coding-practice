@@ -4,5 +4,5 @@
 ### Maven 3.6.1 與 OpenJDK-8 環境
 - 啟用環境
 ```
-docker run -d -p 8080:8080 -v $(pwd)/:/root/ --w /root/ hongyuanyang/my-dev:mvn3.6.1-jdk8
+docker run -d -p 8080:8080 -v $(pwd)/:/root/ -w /root/ hongyuanyang/my-dev:mvn3.6.1-jdk8
 ```
