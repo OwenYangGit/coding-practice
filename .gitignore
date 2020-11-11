@@ -1,2 +1,7 @@
 *.class
 .m2
+.cache
+.config
+.local
+.bash_history
+.tooling
