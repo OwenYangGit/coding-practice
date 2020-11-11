@@ -1,6 +1,7 @@
 // 練習操作 ArrayList
 import java.net.InterfaceAddress;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MyArrayList {
     public static void main(String[] args) {
@@ -42,6 +43,26 @@ public class MyArrayList {
         for (String i : games) {
             System.out.println(i);
         }
-        // 
+        // elements 在 ArrayList 裡面都是 objects , 上面的範例 , String 的 ArrayList 每一個 String 都是物件 (注意, 在JAVA , String 並不是原始資料型態[primitive type])
+        // 以下練習其他 type , 例如 integer
+        System.out.println("----- 練習其他型態 -----");
+        ArrayList<Integer> myNums = new ArrayList<Integer>();
+        myNums.add(10);
+        myNums.add(30);
+        myNums.add(20);
+        myNums.add(40);
+        for (int i : myNums) {
+            System.out.println(i);
+        }
+        // 另一個在 java.util 包裡面的好用的 class "Collections" , 它有一個 sort() 方法可以拿來排序 "字母" 和 "數字"
+        System.out.println("----- 練習 Collections 的 sort() 方法");
+        System.out.println(myNums); // 排序前
+        Collections.sort(myNums);
+        System.out.println(myNums); // 排序後
+        // 按序輸出
+        for (int i : myNums) {
+            System.out.println(i);
+        }
     }
+    // 這邊有提到一點 Wrapper classes 了 , 可以看到語法是 "ClassName<type>"
 }
