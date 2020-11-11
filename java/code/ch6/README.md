@@ -19,3 +19,27 @@
     - 是合用 LinkedList 的時機
         - 你只是想要透過 loop 的方法訪問 list 的 items 而不是隨機訪問 list 裡的 items
         - 你需要頻繁的操作在 list 中 "第一個或中間的 elements"
+
+## Data Types 資料型別 (這邊是之前沒有特別細看的章節 , 回來重看)
+- Java 的原始資料型別只有
+    - byte , short , int , long , float , double , boolean , char
+- 不屬於 Java 原始的資料型態
+    - string , array , class
+- String 型別在 java 中已經被廣泛使用和整合 , 有人稱其為 "特殊的第九種型別" (在 java , String 是由 primitive type 的 `char` 寫出來的物件)
+- 談談 non-primitive 資料型別吧
+    - non-primitive data types 又被稱為 reference types , 因為它們對應到物件(refer objects)
+- primitive data types 與 non-primitive data types 的差別
+    - primitive 是預先定義在 Java 內的 , non-primitive 是被 programmer 創造出來的 , 沒有被定義在 Java (:star:除了 String)
+    - non-primitive data types 可以被用來呼叫 method 去執行特定的動作 , primitive data types 不行
+    - 一個 primitive type 會一直存在一個 value , 但是 non-primitive type 可以是 `null`
+    - primitive type 是用小寫開頭 , non-primitive type 則是大寫開頭
+    - primitive type 的大小取決於 "資料型別(data type) , 但 non-primitive 的大小都是同樣的
+
+## HashMap 不知道怎麼翻 XD
+- 在 HashMap 存儲 data 的方式是以 "key/value" 的形式 , 可以利用不同 type 的 index 去訪問資料
+- object(key 又稱為 index) to object(value) , 這句很難翻 , 總體來說兩邊都是物件 , 但在 HashMap 的結構下 , 前後有不同的名詞定義
+- 舉例來說
+    - 可以用 `String` 為 key 和 `Integer` 當 value (不同型別的 key/value pairs), 也可以 `String` 的 key 和 `String` 的 value (相同型別的 key/value pairs)
+
+## HashSet 這也不知道怎麼翻
+- 
