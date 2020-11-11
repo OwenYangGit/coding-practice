@@ -10,5 +10,9 @@ public class MyTypeLab {
     double d1 = 12E4d;
     System.out.println(f1);
     System.out.println(d1);
+    // 練習 二維陣列概念
+    int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+    int x = myNumbers[0][2]; // 第 0 個陣列的第三個數字 -> 解析: 先取得 {1,2,3,4} 然後在找在 index 2 的元素 , 最後返回 value = 3
+    System.out.println(x); // Outputs 7
     }
 }

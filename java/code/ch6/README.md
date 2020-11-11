@@ -42,4 +42,4 @@
     - 可以用 `String` 為 key 和 `Integer` 當 value (不同型別的 key/value pairs), 也可以 `String` 的 key 和 `String` 的 value (相同型別的 key/value pairs)
 
 ## HashSet 這也不知道怎麼翻
-- 
+- 是在 `java.util` 套件裡的一個 class , 它是一堆 items 的集合 , 每個 item 都是獨一無二的
