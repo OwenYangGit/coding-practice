@@ -59,8 +59,7 @@ modifiers 概念很重要 , 在這麼多類別中使用不同概念操作程式�
 - 關於練習寫 code 時發現的一個問題 (為啥再調用 Date 的 Class 時不用先 new object?)
   - 在 `MyDateLab.java` 有小小的解釋
   - 主要是最後再 stackoverflow 中提到的兩句 , 在程式中調用該方法可能根本不涉及新的 object , 以 Logger 來說 , 返回的是舊的物件 , 跟新的無關
-  - 以圖來說 , 我去追了 LocalDateTime 的 now() 方法 其返回的是 `return now(Clock.systemDefaultZone());`
-![LocalDate now() 方法](../../image/LocalDate-now.png)
-  - 再往下追 , Clock.systemDefaultZone 的返回是 `return new SystemClock(ZoneId.systemDefault());`
-![Clock systemDefaultZone() 方法](../../image/Clock-systemDefaultZone.png)
-    - 小結: 也就是說再調用 LocalDate 的 now 方法根本不需要操作它其他動作 , 它返回調用其他物件方法所取得的 result 回來
+  - 去查看了 LocalDateTime 的 now() 方法 其返回的是 `return now(Clock.systemDefaultZone());`
+  - 再往下看 , Clock.systemDefaultZone 的返回是 `return new SystemClock(ZoneId.systemDefault());`
+  
+### 小結: 也就是說再調用 LocalDate 的 now 方法根本不需要操作它其他動作 , 它返回調用其他物件方法所取得的 result 回來

@@ -63,7 +63,6 @@
   - 錯誤 error
     - 這些不屬於 exceptions , 它是 end users 或 programmer 無法控制的問題 example stackoverflow
 - java 的異常結構   
-![exception hierarchy](../../image/exceptions1.jpg)
   - 所有異常都屬於 java.lang.Exception 子類 , 該類是屬於一個 Throwable 類
   - errors 是一種嚴重的失敗 , 無法透過 java 程式去 handled , 這種錯誤往往都是出現在運行環境
 
