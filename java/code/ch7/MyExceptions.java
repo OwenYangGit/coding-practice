@@ -1,4 +1,12 @@
 public class MyExceptions {
+    //(自製 error 方法)
+    static void checkAge(int age) {
+        if (age < 18) {
+            throw new ArithmeticException("Access denied - You must be at least 18 yaars old.");
+        } else {
+            System.out.println("Access granted - You are old enough!");
+        }
+    }
     public static void main(String[] args) {
         int[] myNumbers = {1, 2, 3};
         // System.out.println(myNumbers[10]); // error! 雖然編譯會過 , 
@@ -21,5 +29,8 @@ public class MyExceptions {
         } finally {
             System.out.println("Alway run it when try-cache finished.");
         }
+        // 呼叫自製的 error 方法
+        System.out.println("----- 呼叫自製的 error 方法 -----");
+        checkAge(15); // 如果改成 checkAge(20); 就會過~
     }
 }
