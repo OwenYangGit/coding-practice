@@ -9,6 +9,12 @@ docker run -d --name my-java-dev -p 8080:8080 -v $(pwd)/:/root/ -w /root/ hongyu
 #### code-server
 - [參考網址](https://github.com/cdr/code-server)
 
+#### code-server extensions
+- Java Extension Pack
+- JDK
+- Spring Initializr
+- Spring Boot Tools
+
 #### 2020-11-16
 自己覺得讀到現在 , 漸漸的理解 java 的概念與一些歷史淵源 , 也開始理解這門語言的基本特性 . 
 幾經思考後 , 決定放棄繼續深究該門語言的各種技巧與工具去作為我的第一門開發語言 .
