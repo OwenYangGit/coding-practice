@@ -4,7 +4,7 @@
 ### Maven 3.6.1 與 OpenJDK-8 環境 , 製作 docker 可攜帶開發環境
 - 啟用環境
 ```
-docker run -d --name my-java-dev -p 8080:8080 -v $(pwd)/:/root/ -w /root/ hongyuanyang/my-dev:mvn3.6.1-jdk8
+docker run -d --name my-java-dev -p 8080:8080 -p 80:5000 -v $(pwd)/:/root/ -w /root/ hongyuanyang/my-dev:mvn3.6.1-jdk8
 ```
 #### code-server
 - [參考網址](https://github.com/cdr/code-server)
@@ -14,6 +14,9 @@ docker run -d --name my-java-dev -p 8080:8080 -v $(pwd)/:/root/ -w /root/ hongyu
 - JDK
 - Spring Initializr
 - Spring Boot Tools
+
+#### 新的 java 基本語法資源
+[參考網址](https://ethan-imagination.blogspot.com/p/javase.html)
 
 #### 2020-11-16
 ~~自己覺得讀到現在 , 漸漸的理解 java 的概念與一些歷史淵源 , 也開始理解這門語言的基本特性 .~~
