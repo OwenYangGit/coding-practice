@@ -16,11 +16,11 @@ docker run -d --name my-java-dev -p 8080:8080 -p 80:5000 -v $(pwd)/:/root/ -w /r
 - Spring Boot Tools
 
 #### 新的 java 基本語法資源
-[參考網址](https://ethan-imagination.blogspot.com/p/javase.html)
-[良葛格 - JavaSE6 markdown 教材](https://github.com/JustinSDK/JavaSE6Tutorial/tree/master/docs)
+- [參考網址](https://ethan-imagination.blogspot.com/p/javase.html)
+- [良葛格 - JavaSE6 markdown 教材](https://github.com/JustinSDK/JavaSE6Tutorial/tree/master/docs)
 
 #### 新的 spring 好看的語法資源
-[某人的 blog , 以他理解的邏輯去閱讀感覺收穫還滿多的](https://github.com/albert-hg/learning-from-jhipster/tree/master)
+- [某人的 blog , 以他理解的邏輯去閱讀感覺收穫還滿多的](https://github.com/albert-hg/learning-from-jhipster/tree/master)
 
 #### 2020-11-16
 ~~自己覺得讀到現在 , 漸漸的理解 java 的概念與一些歷史淵源 , 也開始理解這門語言的基本特性 .~~
