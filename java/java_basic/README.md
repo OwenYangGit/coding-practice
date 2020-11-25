@@ -23,9 +23,15 @@
 - 字串的本質是字元（char）型態的陣列
 - 關於 String 的一些重要觀念
 ```
-一個 String 物件的長度是固定的，您不能改變它的內容，或者是附加新的字元至 String 物件中，您也許會使用 '+' 來串接字串以達到附加新字元或字串的目的，但 '+' 會產生一個新的 String 實例，如果您的程式對這種附加字串的需求很頻繁，並不建議使用 '+' 來進行字串的串接，在物件導向程式設計中，最好是能重複運用已生成的物件，物件的生成需要記憶體空間與時間，不斷的產生 String 實例是一件沒有效率的行為。
+一個 String 物件的長度是固定的，您不能改變它的內容，或者是附加新的字元至 String 物件中，
+您也許會使用 '+' 來串接字串以達到附加新字元或字串的目的，但 '+' 會產生一個新的 String 實例，
+如果您的程式對這種附加字串的需求很頻繁，並不建議使用 '+' 來進行字串的串接，在物件導向程式設計中，
+最好是能重複運用已生成的物件，物件的生成需要記憶體空間與時間，不斷的產生 String 實例是一件沒有效率的行為。
 
-在 J2SE 5.0 開始提供 java.lang.StringBuilder 類別，使用這個類別所產生的物件預設會有 16 個字元的長度，您也可以自行指定初始長度，如果附加的字元超出可容納的長度，則 StringBuilder 物件會自動增加長度以容納被附加的字元，如果您有頻繁作字串附加的需求，使用 StringBuilder 會讓程式的效率大大提昇，來寫個簡單的測試程式就可以知道效能差距有多大。
+在 J2SE 5.0 開始提供 java.lang.StringBuilder 類別，使用這個類別所產生的物件預設會有 16 個字元的長度，
+您也可以自行指定初始長度，如果附加的字元超出可容納的長度，則 StringBuilder 物件會自動增加長度以容納被附加的字元，
+如果您有頻繁作字串附加的需求，使用 StringBuilder 會讓程式的效率大大提昇，來寫個簡單的測試程式就可以知道效能差距有多大。
+
 public class AppendStringTest {
     public static void main(String[] args) {
         String text = "";
@@ -50,5 +56,7 @@ public class AppendStringTest {
 ```
 - 關於 StringBuilder 與 StringBuffer
 ```
-StringBuilder 被設計為與 StringBuffer 具有相同的操作介面，在單機非「多執行緒」（Multithread）的情況下使用 StringBuilder 會有較好的效率，因為 StringBuilder 沒有處理「同步」（Synchronized）問題；StringBuffer 則會處理同步問題，如果您的 StringBuilder 會在多執行緒下被操作，則要改用 StringBuffer，讓物件自行管理同步問題
+StringBuilder 被設計為與 StringBuffer 具有相同的操作介面，在單機非「多執行緒」（Multithread）的情況下使用 StringBuilder 會有較好的效率，
+因為 StringBuilder 沒有處理「同步」（Synchronized）問題；
+StringBuffer 則會處理同步問題，如果您的 StringBuilder 會在多執行緒下被操作，則要改用 StringBuffer，讓物件自行管理同步問題
 ```
