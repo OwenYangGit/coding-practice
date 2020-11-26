@@ -71,3 +71,10 @@ StringBuffer 則會處理同步問題，如果您的 StringBuilder 會在多執�
     - "類別資料成員" -> 代表 class 在宣告一些 attribute 的 name , 以 `MethodMember.java` 來說就是 `MethodDemo` class 下面第一行的 `private int data = 100` 的 data
     - 參考 `ch7/MethodMember.java`
 - 在物件導向程式設計的過程中 , 有一個基本的原則 , 如果資料成員能不公開就不公開 , 在 Java 中若不想公開成員的資訊 , 方式就是宣告成員為 "private" , 這是 "資訊的最小化" , 此時在程式中要存取 "private" 成員 , 就要經由 setXXX() 與 getXXX() 等公開方法來進行設定或存取 , 而不是直接存取資料成員。
+### 練習
+- 有一個帳戶 , 帳戶中有存款餘額 , 您可以對帳戶進行存款與提款的動作 , 並可以查詢以取得存款餘額
+    - `Account.java`
+    - `AccountDemo.java`
+- 實作一個數字型別陣列 `SafeArray` , 動態配置 "陣列長度" , 事先檢查存取的 Array index 是否超出長度 , 可傳回陣列長度 , 設定陣列 elements , 取得 elements
+    - `SafeArray.java`
+    - `SafeArrayDemo.java`
