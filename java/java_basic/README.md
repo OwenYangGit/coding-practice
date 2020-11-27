@@ -71,6 +71,19 @@ StringBuffer 則會處理同步問題，如果您的 StringBuilder 會在多執�
     - "類別資料成員" -> 代表 class 在宣告一些 attribute 的 name , 以 `MethodMember.java` 來說就是 `MethodDemo` class 下面第一行的 `private int data = 100` 的 data
     - 參考 `ch7/MethodMember.java`
 - 在物件導向程式設計的過程中 , 有一個基本的原則 , 如果資料成員能不公開就不公開 , 在 Java 中若不想公開成員的資訊 , 方式就是宣告成員為 "private" , 這是 "資訊的最小化" , 此時在程式中要存取 "private" 成員 , 就要經由 setXXX() 與 getXXX() 等公開方法來進行設定或存取 , 而不是直接存取資料成員。
+- Java 在使用到類別時才會載入類別至程式中 , 如果在載入類別時 , 您希望先進行一些類別的初始化動作 , 您可以使用 "static" 定義一個靜態區塊 , 並在當中撰寫類別載入時的初始化動作 , static 方法裡面要直接呼叫方法只能呼叫一樣是 static 方法 , 否則編譯會出錯
+- Overload(方法重載) -> 可根據 "參數列" 的不同而自動呼叫對應的方法 , 返回值型態不可用作為方法重載的區別依據
+    - 使用方法重載時 , 要注意到 autoboxing , unboxing 的問題
+- 編譯器在處理重載方法 / 裝箱問題及 "不定長度引數"時 , 會依下面的順序來尋找符合的方法
+    - 1. 找尋在還沒有裝箱動作前可以符合引數個數與型態的方法
+    - 2. 嘗試裝箱動作後可以符合引數個數與型態的方法
+    - 3. 嘗試設有「不定長度引數」並可以符合的方法
+    - 4. 編譯器找不到合適的方法，回報編譯錯誤
+- 遞迴方法(recursion method) -> 在方法中呼叫自己這個方法 , 遞迴的實際案例練習 "求最大公因數"
+    - `UserRecursion.java`
+- GC(Garbage Collection) -> 在 Java 中有 finalize() 這個方法 , 它被宣告為 "protected" , finalize() 會在物件被回收時執行 , 但您不可以將它當作解構方法來使用 , 因為不知道物件資源何時被回收 , 所以也就不知道 finalize() 真正被執行的時間
+    - 確定不再使用某個物件 , 您可以在參考至該物件的名稱上指定 "null" , 表示這個名稱不再參考至任何物件 , 不被任何名稱參考的物件將會被回收資源 , 您可以使用 System.gc() 建議程式進行垃圾收集 , 如果建議被採納 , 則物件資源會被回收 , 回收前會執行 finalize() 方法
+
 ### 練習
 - 有一個帳戶 , 帳戶中有存款餘額 , 您可以對帳戶進行存款與提款的動作 , 並可以查詢以取得存款餘額
     - `Account.java`
@@ -78,3 +91,7 @@ StringBuffer 則會處理同步問題，如果您的 StringBuilder 會在多執�
 - 實作一個數字型別陣列 `SafeArray` , 動態配置 "陣列長度" , 事先檢查存取的 Array index 是否超出長度 , 可傳回陣列長度 , 設定陣列 elements , 取得 elements
     - `SafeArray.java`
     - `SafeArrayDemo.java`
+- 利用 static 區塊對於 class 在被載入的時候進行一些初始化動作
+    - `SomeClass.java`
+    - `StaticBlockDemo.java`
+- 利用遞迴方法求最大公因數
