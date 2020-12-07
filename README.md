@@ -24,3 +24,6 @@ MVC > AOP > DI,IOC > SINGLETON > SPRING配置(如何建立SPRING應用，包括�
 ```
 #### 新的 spring 好看的語法資源
 - [某人的 blog , 以他理解的邏輯去閱讀感覺收穫還滿多的](https://github.com/albert-hg/learning-from-jhipster/tree/master)
+
+#### 預計要讀的專案 code
+- [github](https://github.com/alexmanrique/spring-boot-application-example)
