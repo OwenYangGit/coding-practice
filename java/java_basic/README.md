@@ -96,3 +96,6 @@ StringBuffer 則會處理同步問題，如果您的 StringBuilder 會在多執�
     - `StaticBlockDemo.java`
 - 利用遞迴方法求最大公因數
   - `UserRecursion.java`
+
+## Chapter 8
+### 繼承與多型
